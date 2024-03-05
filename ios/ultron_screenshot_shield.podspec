@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'ultron_screenshot_shield'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'A new Flutter plugin project for Enable/Disable Screenshot'
   s.description      = <<-DESC
   A new Flutter plugin project for Enable/Disable Screenshot
@@ -13,9 +13,8 @@ Pod::Spec.new do |s|
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Gtech Digital' => 'ultron@gtech.digital' }
   s.source           = { :path => '.' }
-  s.source_files     = 'Classes/**/*'
+  s.source_files     = 'Classes/**/*', 'Classes/*.swift'
   s.dependency      'Flutter'
-  s.dependency      'ScreenProtectorKit'
   s.platform = :ios, '11.0'
 
   # Flutter.framework does not contain a i386 slice.

@@ -2,19 +2,13 @@ PODS:
   - Flutter (1.0.0)
   - integration_test (0.0.1):
     - Flutter
-  - ScreenProtectorKit (1.3.1)
-  - ultron_screenshot_shield (1.0.0):
+  - ultron_screenshot_shield (1.1.0):
     - Flutter
-    - ScreenProtectorKit
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - integration_test (from `.symlinks/plugins/integration_test/ios`)
   - ultron_screenshot_shield (from `.symlinks/plugins/ultron_screenshot_shield/ios`)
-
-SPEC REPOS:
-  trunk:
-    - ScreenProtectorKit
 
 EXTERNAL SOURCES:
   Flutter:
@@ -27,8 +21,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   integration_test: 13825b8a9334a850581300559b8839134b124670
-  ScreenProtectorKit: 83a6281b02c7a5902ee6eac4f5045f674e902ae4
-  ultron_screenshot_shield: ae17b6f7ec9abfb1e2bd6800d4d7cf20cdb200fe
+  ultron_screenshot_shield: d8efcc8d96aeb25ffeb54dd0dd7a02de478fdb77
 
 PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
 
