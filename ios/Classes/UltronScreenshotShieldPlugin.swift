@@ -1,27 +1,26 @@
 import Flutter
 import UIKit
-import ScreenProtectorKit
 
 public class UltronScreenshotShieldPlugin: NSObject, FlutterPlugin {
 
-  private var screenProtectorKit: ScreenProtectorKit? = nil
+  private var screenshotShield: UltronScreenshotShield? = nil
     
-  init(screenProtectorKit: ScreenProtectorKit) {
-    self.screenProtectorKit = screenProtectorKit
+  init(screenshotShield: UltronScreenshotShield) {
+    self.screenshotShield = screenshotShield
   }
   
   deinit {
-    screenProtectorKit?.removeAllObserver()
+    screenshotShield?.removeScreenshotObserver()
   }
 
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "ultron_screenshot_shield", binaryMessenger: registrar.messenger())
 
     let window = UIApplication.shared.delegate?.window
-    let screenProtectorKit = ScreenProtectorKit(window: window as? UIWindow)
-    screenProtectorKit.configurePreventionScreenshot()
+    let screenshotShield = UltronScreenshotShield(window: window as? UIWindow)
+    screenshotShield.configurePreventionScreenshot()
 
-    let instance = UltronScreenshotShieldPlugin(screenProtectorKit: screenProtectorKit)
+    let instance = UltronScreenshotShieldPlugin(screenshotShield: screenshotShield)
     registrar.addMethodCallDelegate(instance, channel: channel)
     registrar.addApplicationDelegate(instance)
   }
@@ -29,10 +28,10 @@ public class UltronScreenshotShieldPlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
     case "disableScreenshot":
-      screenProtectorKit?.enabledPreventScreenshot()
+      screenshotShield?.enabledPreventScreenshot()
       result(true)
     case "enableScreenshot":
-      screenProtectorKit?.disablePreventScreenshot()
+      screenshotShield?.disablePreventScreenshot()
       result(true)
     default:
       result(false)
