@@ -24,7 +24,9 @@ void main() {
 
   test('$MethodChannelUltronScreenshotShield is the default instance', () {
     expect(
-        initialPlatform, isInstanceOf<MethodChannelUltronScreenshotShield>());
+      initialPlatform,
+      isInstanceOf<MethodChannelUltronScreenshotShield>(),
+    );
   });
 
   test('enableScreenshot', () async {

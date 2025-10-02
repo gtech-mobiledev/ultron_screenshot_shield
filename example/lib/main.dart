@@ -23,25 +23,23 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
+        appBar: AppBar(title: const Text('Plugin example app')),
         body: Center(
           child: Column(
             children: [
               ElevatedButton(
-                  onPressed: () async {
-                    await UltronScreenshotShield.disableScreenshot();
-                  },
-                  child: const Text('Disable Screenshot')),
-              const SizedBox(
-                height: 20,
+                onPressed: () async {
+                  await UltronScreenshotShield.disableScreenshot();
+                },
+                child: const Text('Disable Screenshot'),
               ),
+              const SizedBox(height: 20),
               ElevatedButton(
-                  onPressed: () async {
-                    await UltronScreenshotShield.enableScreenshot();
-                  },
-                  child: const Text('Enable Screenshot')),
+                onPressed: () async {
+                  await UltronScreenshotShield.enableScreenshot();
+                },
+                child: const Text('Enable Screenshot'),
+              ),
             ],
           ),
         ),
