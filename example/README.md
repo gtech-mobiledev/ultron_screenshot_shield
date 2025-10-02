@@ -1,6 +1,6 @@
-# ultron_screenshot_shield_example
+# example
 
-Demonstrates how to use the ultron_screenshot_shield plugin.
+A new Flutter project.
 
 ## Getting Started
 
