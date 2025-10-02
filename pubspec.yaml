@@ -1,7 +1,8 @@
 name: ultron_screenshot_shield
 description: "A new Flutter plugin project."
 version: 2.0.0
-homepage:
+homepage: https://github.com/gtech-mobiledev/ultron_screenshot_shield
+repository: https://github.com/gtech-mobiledev/ultron_screenshot_shield
 
 environment:
   sdk: ^3.8.0
