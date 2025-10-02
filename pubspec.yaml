@@ -6,6 +6,7 @@ repository: https://github.com/gtech-mobiledev/ultron_screenshot_shield
 
 environment:
   sdk: ^3.8.0
+  flutter: '>=3.22.0'
 
 dependencies:
   flutter:
